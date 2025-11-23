@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Intro from "./components/Intro";
 import Home from "./components/Home";
@@ -15,7 +15,7 @@ function App() {
         <div className="bg-blob bg-blob-2"></div>
         <div className="bg-blob bg-blob-3"></div>
       </div>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={
             !showHome ? (
@@ -27,7 +27,7 @@ function App() {
           <Route path="/projet-dmz" element={<ProjetDMZ />} />
           <Route path="/projet-discord-monitoring" element={<ProjetDiscordMonitoring />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
