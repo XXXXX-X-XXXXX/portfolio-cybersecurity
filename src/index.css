@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  background: #080c10;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Blobs gris animés */
+#bg-blobs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(110px) opacity(0.56);
+  mix-blend-mode: lighten;
+  animation: moveblob 13s infinite alternate ease-in-out;
+}
+.bg-blob-1 {
+  background: #6B7280;  /* Gris moyen */
+  width: 540px;
+  height: 370px;
+  top: 10%;
+  left: -12%;
+  animation-delay: 0s;
+}
+.bg-blob-2 {
+  background: #9CA3AF;  /* Gris clair */
+  width: 340px;
+  height: 220px;
+  top: 72%;
+  left: 62%;
+  animation-delay: 3s;
+}
+.bg-blob-3 {
+  background: #D1D5DB;  /* Gris très clair */
+  width: 290px;
+  height: 240px;
+  top: 52%;
+  left: 75%;
+  filter: blur(140px) opacity(0.18);
+  animation-delay: 6s;
+}
+@keyframes moveblob {
+  0%   { transform: translateY(0) scale(1)   rotate(0deg);}
+  70%  { transform: translateY(-35px) scale(1.13) rotate(18deg);}
+  100% { transform: translateY(27px) scale(1)   rotate(-11deg);}
+}
+
+/* Typewriter effet */
+.typewriter {
+  display: inline-block;
+  font-family: 'Fira Mono', monospace;
+  color: #9CA3AF;  /* Gris clair */
+  white-space: pre;
+}
+.typewriter .cursor {
+  display: inline-block;
+  width: 1ch;
+  background: #9CA3AF;  /* Gris clair */
+  color: transparent;
+  animation: blink 0.7s infinite step-end;
+}
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  40% { opacity: 0; }
+  60% { opacity: 0; }
+}
