@@ -1,9 +1,9 @@
 {
-  "name": "porfolio-cybersecurity",
+  "name": "portfolio-cybersecurity",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://XXXXX-X-XXXXX.github.io/porfolio-cybersecurity",
+  "homepage": "https://XXXXX-X-XXXXX.github.io/portfolio-cybersecurity",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
