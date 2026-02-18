@@ -6,26 +6,34 @@ const prefix = import.meta.env.BASE_URL;
 
 const projects = [
   {
-    title: "Projet Réseau : DMZ & Pare-feu",
-    description: "Réalisation d’un réseau isolé avec DMZ, filtrage et NAT.",
-    details: "Infrastructure avec DMZ sécurisée, routage/masquerading, services DMZ, création et tests de règles pare-feu. Exercices sur la segmentation et la protection des flux selon les pratiques pros.",
-    img: `${prefix}images/generated-image.png`, // <-- modifié
-    tags: ["Réseaux", "Firewall", "DMZ"],
-    url: "/projet-dmz"
+    title: "Administration SSH & Serveur Web Nginx",
+    description: "Mise en place d'un serveur Ubuntu virtualisé, sécurisé via SSH et déploiement d'un serveur web Nginx avec HTTPS.",
+    details: "Virtualisation d'un serveur Ubuntu, durcissement SSH, installation et configuration de Nginx, mise en place du HTTPS et gestion des certificats.",
+    img: `${prefix}images/nginx-ssh.png`,
+    tags: ["Linux", "Nginx", "SSH"],
+    url: "/projet-sss_nginx"
   },
   {
     title: "Monitoring Sécurité : Alertes Discord",
     description: "Surveillance automatisée de fichiers sensibles et des connexions SSH hors horaires, avec alertes instantanées sur Discord via webhook.",
     details: "TP pratique où des scripts Bash/Python surveillent la lecture de fichiers critiques et les connexions SSH hors horaires. Les alertes s'affichent en live dans un salon Discord pour la réactivité de l'équipe sécurité.",
-    img: `${prefix}images/discordproject.png`, // <-- modifié
+    img: `${prefix}images/discordproject.png`,
     tags: ["Sécurité", "Discord", "Linux", "Bash"],
     url: "/projet-discord-monitoring"
   },
   {
+    title: "Projet Réseau : DMZ & Pare-feu",
+    description: "Réalisation d'un réseau isolé avec DMZ, filtrage et NAT.",
+    details: "Infrastructure avec DMZ sécurisée, routage/masquerading, services DMZ, création et tests de règles pare-feu. Exercices sur la segmentation et la protection des flux selon les pratiques pros.",
+    img: `${prefix}images/generated-image.png`,
+    tags: ["Réseaux", "Firewall", "DMZ"],
+    url: "/projet-dmz"
+  },
+  {
     title: "Portfolio React",
-    description: "Développement d’un portfolio responsive, animations modernes.(Portfolio que vous consultez actuellement)",
+    description: "Développement d'un portfolio responsive, animations modernes.(Portfolio que vous consultez actuellement)",
     details: "Site portfolio réalisé avec React, TailwindCSS, Framer Motion. Design responsive, routing, présentation projets cybersécurité.",
-    img: `${prefix}images/portfoliocyber.png`, // <-- modifié
+    img: `${prefix}images/portfoliocyber.png`,
     tags: ["React", "UI/UX", "Frontend"],
     url: "#"
   }

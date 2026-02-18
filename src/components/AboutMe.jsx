@@ -58,7 +58,7 @@ export default function AboutMe() {
           <div className="flex gap-4 mt-8 flex-wrap">
             {/* Download CV */}
             <a
-              href={`${import.meta.env.BASE_URL}cv/cv_martin.pdf`}
+              href={`${import.meta.env.BASE_URL}cv/CV_stage.pdf`}
               download
               className="px-6 py-2 rounded-full font-bold text-base shadow transition-all duration-200 flex items-center gap-2 border-2"
               style={{
@@ -81,6 +81,11 @@ export default function AboutMe() {
             {/* View Projects */}
             <a
               href="#projects"
+              onClick={(e) => {
+                e.preventDefault();
+                const target = document.getElementById('projects');
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+              }}
               className="px-6 py-2 rounded-full font-bold text-base shadow transition-all duration-200 flex items-center gap-2 border-2"
               style={{
                 border: "none",
@@ -105,7 +110,7 @@ export default function AboutMe() {
         <div className="flex-1 flex items-center justify-end">
           <div className="w-64 h-64 rounded-full bg-gradient-to-br from-[#23272e] to-[#101214] border-2 border-[#7C7C86] shadow-2xl flex items-center justify-center overflow-hidden">
             <img 
-              src={`${import.meta.env.BASE_URL}images/pdp.jpeg`} 
+              src={`${import.meta.env.BASE_URL}images/pdp2.jpg`} 
               alt="Martin Desbans" 
               className="w-full h-full object-cover"
             />

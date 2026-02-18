@@ -1,21 +1,33 @@
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const skills = ["Web", "Linux", "Root-Me", "TryHackMe", "Hack The Box"];
+  const skills = [
+    {
+      label: "TryHackMe",
+      href: "https://tryhackme.com/p/XXXXXXXXXX",
+    },
+    {
+      label: "Root-Me",
+      href: "https://www.root-me.org/XXXXXXXXXXX-1032190?inc=info&lang=fr",
+    },
+    {
+      label: "Hack The Box",
+      href: "https://app.hackthebox.com/public/users/2426212?profile-top-tab=machines&ownership-period=1M&profile-bottom-tab=prolabs",
+    },
+  ];
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center px-8 pt-24">
-      
-
       {/* Titre principal sur deux lignes */}
       <motion.h1
         className="text-[3.2rem] md:text-[4.6rem] font-extrabold text-center leading-none mb-1"
         style={{
-          background: "linear-gradient(90deg, #e0e0e0 0%, #9CA3AF 40%, #ececec 60%, #333 100%)",
+          background:
+            "linear-gradient(90deg, #e0e0e0 0%, #9CA3AF 40%, #ececec 60%, #333 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           textShadow: "0 2px 22px #aaa6, 0 1px 1px #fff8",
-          letterSpacing: "1px"
+          letterSpacing: "1px",
         }}
         initial={{ x: -80, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -23,6 +35,7 @@ export default function Hero() {
       >
         ÉTUDIANT
       </motion.h1>
+
       <motion.h2
         className="text-[2.3rem] md:text-[3.2rem] font-bold text-center mt-0 mb-3 text-gray-300"
         initial={{ x: 80, opacity: 0 }}
@@ -49,18 +62,24 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.35 }}
       >
-        Passionné par l'informatique, j'améliore en continu mes compétences techniques et pratiques sur les plateformes de cybersécurité. Objectif : protéger et renforcer la sécurité des systèmes.
+        Passionné par la cybersécurité, j&apos;améliore en continu mes
+        compétences techniques et pratiques sur les plateformes de
+        cybersécurité. Objectif : protéger et renforcer la sécurité des
+        systèmes.
       </motion.p>
 
-      {/* Skills badges */}
+      {/* Comptes cyber */}
       <div className="flex gap-4 mb-7 flex-wrap justify-center">
         {skills.map((skill, idx) => (
-          <span
+          <a
             key={idx}
-            className="px-5 py-2 rounded-xl bg-[#1F232A] text-gray-200 font-medium shadow hover:bg-gray-700 transition"
+            href={skill.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 rounded-xl bg-[#1F232A] text-gray-200 font-medium shadow hover:bg-gray-700 transition block"
           >
-            {skill}
-          </span>
+            {skill.label}
+          </a>
         ))}
       </div>
 
@@ -72,14 +91,21 @@ export default function Hero() {
         transition={{ duration: 0.7, delay: 0.2 }}
       >
         <p className="text-xl text-gray-400 italic text-center border-l-4 border-[#374151] pl-6 py-2">
-          La sécurité n'est pas un produit, mais un processus.
+          La sécurité n&apos;est pas un produit, mais un processus.
         </p>
-        <p className="text-sm text-gray-500 text-right mt-2">— Bruce Schneier</p>
+        <p className="text-sm text-gray-500 text-right mt-2">
+          — Bruce Schneier
+        </p>
       </motion.div>
 
       {/* Réseaux sociaux */}
       <div className="flex gap-4 mt-5">
-        <a href="https://github.com/XXXXX-X-XXXXX" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-[#18181b] text-gray-200 shadow-lg hover:bg-gray-700 transition">
+        <a
+          href="https://github.com/XXXXX-X-XXXXX"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-3 rounded-full bg-[#18181b] text-gray-200 shadow-lg hover:bg-gray-700 transition"
+        >
           Github
         </a>
         {/* Ajoute d'autres icônes ici */}

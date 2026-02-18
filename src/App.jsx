@@ -4,6 +4,8 @@ import Intro from "./components/Intro";
 import Home from "./components/Home";
 import ProjetDMZ from "./pages/ProjetDMZ";
 import ProjetDiscordMonitoring from "./pages/ProjetDiscordMonitoring";
+import ProjetNginx from "./pages/ProjetNginx";
+
 
 function App() {
   const [showHome, setShowHome] = useState(false);
@@ -26,6 +28,7 @@ function App() {
           } />
           <Route path="/projet-dmz" element={<ProjetDMZ />} />
           <Route path="/projet-discord-monitoring" element={<ProjetDiscordMonitoring />} />
+          <Route path="/projet-sss_nginx" element={<ProjetNginx />} />
         </Routes>
       </HashRouter>
     </>
