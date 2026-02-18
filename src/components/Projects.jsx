@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
-// Préfixe dynamique pour les chemins statiques (dossier public)
 const prefix = import.meta.env.BASE_URL;
 
 const projects = [
@@ -41,9 +40,9 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="min-h-[60vh] flex flex-col items-center justify-center w-full px-6 py-20">
+    <section id="projects" className="min-h-[60vh] flex flex-col items-center justify-center w-full px-5 md:px-6 py-16 md:py-20">
       <motion.h2
-        className="text-5xl font-extrabold text-center mb-6"
+        className="text-3xl md:text-5xl font-extrabold text-center mb-4 md:mb-6"
         style={{
           background: "linear-gradient(90deg, #e0e0e0 0%, #9CA3AF 40%, #ececec 60%, #333 100%)",
           WebkitBackgroundClip: "text",
@@ -58,14 +57,14 @@ export default function Projects() {
         Projects
       </motion.h2>
       <motion.p
-        className="text-lg text-gray-400 font-medium text-center mb-12 max-w-2xl"
+        className="text-base md:text-lg text-gray-400 font-medium text-center mb-8 md:mb-12 max-w-2xl px-2"
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
         Découvre mes projets cybersécurité et dev. Clique une carte pour plus de détails !
       </motion.p>
-      <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
         {projects.map(project => (
           <ProjectCard key={project.title} project={project} />
         ))}

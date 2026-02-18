@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-// On crée un helper pour préfixer les chemins d'images
 const prefix = import.meta.env.BASE_URL;
 
 const skills = [
@@ -12,15 +11,13 @@ const skills = [
   { name: "Metasploit", img: `${prefix}logo/metasploit.png` },
   { name: "VS Code", img: `${prefix}logo/vscode.png` },
   { name: "Réseaux", img: `${prefix}logo/reseaux.png` },
-  // Ajoute tes autres logos ici !
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="min-h-[50vh] flex flex-col items-center justify-center w-full px-6 py-20">
-      {/* Titre Skills centré en haut + effet chrome */}
+    <section id="skills" className="min-h-[50vh] flex flex-col items-center justify-center w-full px-5 md:px-6 py-16 md:py-20">
       <motion.h2
-        className="text-5xl font-extrabold text-center mb-12 flex items-center justify-center gap-4"
+        className="text-3xl md:text-5xl font-extrabold text-center mb-8 md:mb-12 flex items-center justify-center gap-4"
         style={{
           background: "linear-gradient(90deg, #e0e0e0 0%, #9CA3AF 40%, #ececec 60%, #333 100%)",
           WebkitBackgroundClip: "text",
@@ -34,13 +31,12 @@ export default function Skills() {
       >
         Skills
       </motion.h2>
-      
-      {/* Grid des skills tech */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-7 mt-3 w-full max-w-4xl">
+
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-7 mt-3 w-full max-w-4xl">
         {skills.map(skill => (
           <motion.div
             key={skill.name}
-            className="flex flex-col items-center p-6 bg-[#18181b] rounded-2xl shadow-md transition-all duration-200 h-52 group relative"
+            className="flex flex-col items-center p-4 md:p-6 bg-[#18181b] rounded-2xl shadow-md transition-all duration-200 h-36 md:h-52 group relative"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, type: "spring" }}
@@ -52,24 +48,21 @@ export default function Skills() {
               e.currentTarget.style.boxShadow = "0 2px 10px #aaa5";
             }}
           >
-            <div className="flex items-center justify-center w-full min-h-[80px] mb-2">
+            <div className="flex items-center justify-center w-full flex-1 mb-1">
               <img
                 src={skill.img}
                 alt={skill.name}
-                className={
-                  `object-contain
-                  ${
-                    skill.name === "Burp Suite"
-                      ? "w-38 h-38"
-                      : ["Nmap", "Réseaux", "JohnTheRipper", "Linux", "Metasploit"].includes(skill.name)
-                        ? "w-24 h-24"
-                        : "w-16 h-16"
-                  }`
-                }
+                className={`object-contain ${
+                  skill.name === "Burp Suite"
+                    ? "w-20 h-20 md:w-28 md:h-28"
+                    : ["Nmap", "Réseaux", "JohnTheRipper", "Linux", "Metasploit"].includes(skill.name)
+                      ? "w-14 h-14 md:w-24 md:h-24"
+                      : "w-10 h-10 md:w-16 md:h-16"
+                }`}
               />
             </div>
             <span
-              className="mt-auto font-semibold text-xl md:text-2xl text-gray-100"
+              className="font-semibold text-sm md:text-xl text-gray-100 text-center"
               style={{ letterSpacing: "0.5px" }}
             >
               {skill.name}

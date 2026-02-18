@@ -25,7 +25,7 @@ body {
   animation: moveblob 13s infinite alternate ease-in-out;
 }
 .bg-blob-1 {
-  background: #6B7280;  /* Gris moyen */
+  background: #6B7280;
   width: 540px;
   height: 370px;
   top: 10%;
@@ -33,7 +33,7 @@ body {
   animation-delay: 0s;
 }
 .bg-blob-2 {
-  background: #9CA3AF;  /* Gris clair */
+  background: #9CA3AF;
   width: 340px;
   height: 220px;
   top: 72%;
@@ -41,7 +41,7 @@ body {
   animation-delay: 3s;
 }
 .bg-blob-3 {
-  background: #D1D5DB;  /* Gris très clair */
+  background: #D1D5DB;
   width: 290px;
   height: 240px;
   top: 52%;
@@ -59,13 +59,13 @@ body {
 .typewriter {
   display: inline-block;
   font-family: 'Fira Mono', monospace;
-  color: #9CA3AF;  /* Gris clair */
+  color: #9CA3AF;
   white-space: pre;
 }
 .typewriter .cursor {
   display: inline-block;
   width: 1ch;
-  background: #9CA3AF;  /* Gris clair */
+  background: #9CA3AF;
   color: transparent;
   animation: blink 0.7s infinite step-end;
 }
@@ -73,4 +73,10 @@ body {
   0%, 50%, 100% { opacity: 1; }
   40% { opacity: 0; }
   60% { opacity: 0; }
+}
+
+/* Tout le contenu principal passe au-dessus des blobs */
+#root > * {
+  position: relative;
+  z-index: 1;
 }
