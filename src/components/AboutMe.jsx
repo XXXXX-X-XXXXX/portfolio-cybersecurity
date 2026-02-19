@@ -51,22 +51,24 @@ export default function AboutMe() {
                 letterSpacing: "1px"
               }}
             >
-              Bienvenue, je suis
+              Welcome, I'm
             </span>
             <span className="text-white text-[1.8rem] md:text-[2.55rem] mt-2 drop-shadow-xl">
               Martin Desbans
             </span>
           </h3>
           <p className="mt-4 md:mt-6 text-base md:text-lg text-gray-400 leading-relaxed max-w-md mx-auto md:mx-0">
-            Étudiant en bachelor 1, passionné en cybersécurité, je me forme quotidiennement à la sécurité offensive et défensive.<br />
-            J'explore les plateformes CTF (TryHackMe, Root-Me, Hack The Box) pour progresser techniquement et développer des solutions pour protéger les systèmes et les applications.<br />
-            Mon objectif est d'acquérir des compétences avancées pour anticiper, détecter et contrer les menaces informatiques.
+            I am a first-year bachelor student, passionate about cybersecurity. 
+            I train every day in offensive security. I use CTF/Cyber platforms 
+            (TryHackMe, Root-Me, Hack The Box) to improve my skills and create solutions to 
+            protect systems and applications. My dream is to become a penetration tester, 
+            so I can legally attack systems to find weaknesses before real hackers do.
           </p>
 
           {/* Boutons */}
           <div className="flex gap-4 mt-6 md:mt-8 flex-wrap justify-center md:justify-start">
             <a
-              href={`${import.meta.env.BASE_URL}cv/CV_stage.pdf`}
+              href={`${import.meta.env.BASE_URL}cv/CV_DESBANS-Martin.pdf`}
               download
               className="px-5 py-2 rounded-full font-bold text-sm md:text-base shadow transition-all duration-200 flex items-center gap-2"
               style={{ border: "none", background: "transparent", color: "#fff", boxShadow: "0 2px 10px #aaa5" }}

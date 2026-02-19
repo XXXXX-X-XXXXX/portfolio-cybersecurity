@@ -39,14 +39,14 @@ export default function CommentsSection() {
           value={name}
           onChange={e => setName(e.target.value)}
           required
-          placeholder="Ton nom"
+          placeholder="Your name"
           className="w-full mb-3 rounded-lg p-2 bg-[#23262a] text-white border border-[#36393f] focus:border-[#93979b] outline-none transition"
         />
         <textarea
           value={msg}
           onChange={e => setMsg(e.target.value)}
           required
-          placeholder="Écris ton avis ici…"
+          placeholder="Write your review here.."
           className="w-full mb-3 rounded-lg p-2 bg-[#23262a] text-white border border-[#36393f] focus:border-[#93979b] outline-none transition resize-none"
           rows={3}
         />
@@ -54,7 +54,7 @@ export default function CommentsSection() {
           className="px-5 py-2 rounded-xl font-bold bg-gradient-to-r from-[#9CA3AF] to-[#333] text-white shadow hover:scale-105 transition"
           type="submit"
         >
-          Poster l’avis
+          Submit review
         </button>
       </form>
       <div className="space-y-4">

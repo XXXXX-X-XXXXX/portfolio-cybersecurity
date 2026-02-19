@@ -10,7 +10,7 @@ const skills = [
   { name: "Burp Suite", img: `${prefix}logo/burpsuite.png` },
   { name: "Metasploit", img: `${prefix}logo/metasploit.png` },
   { name: "VS Code", img: `${prefix}logo/vscode.png` },
-  { name: "Réseaux", img: `${prefix}logo/reseaux.png` },
+  { name: "Network", img: `${prefix}logo/reseaux.png` },
 ];
 
 export default function Skills() {

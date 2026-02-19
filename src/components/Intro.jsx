@@ -59,7 +59,7 @@ export default function Intro({ onAccess }) {
         onClick={onAccess}
         whileHover={{ scale: 1.12, boxShadow: "0 0 60px 15px #9CA3AFee", y: -5 }}
       >
-        Accéder à mon portfolio
+        Access my portfolio
       </motion.button>
     </div>
   );

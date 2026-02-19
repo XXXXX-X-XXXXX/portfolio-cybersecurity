@@ -76,7 +76,8 @@ body {
 }
 
 /* Tout le contenu principal passe au-dessus des blobs */
-#root > * {
+/* Tout le contenu principal passe au-dessus des blobs */
+#root > *:not(#bg-blobs) {
   position: relative;
   z-index: 1;
 }

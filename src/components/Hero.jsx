@@ -23,7 +23,7 @@ export default function Hero() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, type: "spring" }}
       >
-        ÉTUDIANT
+        STUDENT
       </motion.h1>
 
       <motion.h2
@@ -32,7 +32,7 @@ export default function Hero() {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.15, type: "spring" }}
       >
-        CyberSécurité
+        CyberSecurity
       </motion.h2>
 
       <motion.p
@@ -50,10 +50,9 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.35 }}
       >
-        Passionné par la cybersécurité, j&apos;améliore en continu mes
-        compétences techniques et pratiques sur les plateformes de
-        cybersécurité. Objectif : protéger et renforcer la sécurité des
-        systèmes.
+        Passionate about cybersecurity, I constantly improve my technical
+        and hands-on skills on cybersecurity platforms. My goal is to protect systems and 
+        make their security stronger in offensive cyber.
       </motion.p>
 
       {/* Comptes cyber */}
@@ -79,10 +78,10 @@ export default function Hero() {
         transition={{ duration: 0.7, delay: 0.2 }}
       >
         <p className="text-base md:text-xl text-gray-400 italic text-center border-l-4 border-[#374151] pl-4 md:pl-6 py-2">
-          La sécurité n&apos;est pas un produit, mais un processus.
+          Cybersecurity is much more than a matter of IT — it’s a business imperative.
         </p>
         <p className="text-xs md:text-sm text-gray-500 text-right mt-2">
-          — Bruce Schneier
+          — Stéphane Nappo
         </p>
       </motion.div>
 

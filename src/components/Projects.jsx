@@ -5,32 +5,32 @@ const prefix = import.meta.env.BASE_URL;
 
 const projects = [
   {
-    title: "Administration SSH & Serveur Web Nginx",
-    description: "Mise en place d'un serveur Ubuntu virtualisé, sécurisé via SSH et déploiement d'un serveur web Nginx avec HTTPS.",
+    title: "SSH Administration & Nginx Web Server",
+    description: "Setup of a virtualized Ubuntu server, secured via SSH, and deployment of an Nginx web server with HTTPS.”",
     details: "Virtualisation d'un serveur Ubuntu, durcissement SSH, installation et configuration de Nginx, mise en place du HTTPS et gestion des certificats.",
     img: `${prefix}images/nginx-ssh.png`,
     tags: ["Linux", "Nginx", "SSH"],
     url: "/projet-sss_nginx"
   },
   {
-    title: "Monitoring Sécurité : Alertes Discord",
-    description: "Surveillance automatisée de fichiers sensibles et des connexions SSH hors horaires, avec alertes instantanées sur Discord via webhook.",
+    title: "Security Monitoring: Discord Alerts",
+    description: "Automated monitoring of sensitive files and after-hours SSH connections, with instant alerts sent to Discord via webhook",
     details: "TP pratique où des scripts Bash/Python surveillent la lecture de fichiers critiques et les connexions SSH hors horaires. Les alertes s'affichent en live dans un salon Discord pour la réactivité de l'équipe sécurité.",
     img: `${prefix}images/discordproject.png`,
-    tags: ["Sécurité", "Discord", "Linux", "Bash"],
+    tags: ["Security", "Discord", "Linux", "Bash"],
     url: "/projet-discord-monitoring"
   },
   {
-    title: "Projet Réseau : DMZ & Pare-feu",
-    description: "Réalisation d'un réseau isolé avec DMZ, filtrage et NAT.",
-    details: "Infrastructure avec DMZ sécurisée, routage/masquerading, services DMZ, création et tests de règles pare-feu. Exercices sur la segmentation et la protection des flux selon les pratiques pros.",
+    title: "Network Project: DMZ & Firewall",
+    description: "Creation of an isolated network with a DMZ, filtering, and NAT.",
+    details: "Infrastructure with a secure DMZ, routing/masquerading, DMZ services, creation and testing of firewall rules. Exercises on network segmentation and protection of flows according to industry best practices.",
     img: `${prefix}images/generated-image.png`,
-    tags: ["Réseaux", "Firewall", "DMZ"],
+    tags: ["Network", "Firewall", "DMZ"],
     url: "/projet-dmz"
   },
   {
-    title: "Portfolio React",
-    description: "Développement d'un portfolio responsive, animations modernes.(Portfolio que vous consultez actuellement)",
+    title: "React Portfolio",
+    description: "Development of a responsive portfolio with modern animations (the portfolio you are currently viewing).",
     details: "Site portfolio réalisé avec React, TailwindCSS, Framer Motion. Design responsive, routing, présentation projets cybersécurité.",
     img: `${prefix}images/portfoliocyber.png`,
     tags: ["React", "UI/UX", "Frontend"],
@@ -62,7 +62,7 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1 }}
       >
-        Découvre mes projets cybersécurité et dev. Clique une carte pour plus de détails !
+        Discover my cybersecurity and dev projects. Click a card for more details !
       </motion.p>
       <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-8">
         {projects.map(project => (

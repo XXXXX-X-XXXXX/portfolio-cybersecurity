@@ -36,7 +36,7 @@ export default function ProjectCard({ project }) {
           onClick={() => navigate(project.url)}
           className="mt-1 px-4 py-2 rounded-lg bg-[#9CA3AF] text-[#23262a] font-semibold transition hover:bg-[#ececec] text-sm"
         >
-          En savoir plus
+          Learn more
         </button>
       ) : (
         project.details && (
@@ -45,7 +45,7 @@ export default function ProjectCard({ project }) {
               onClick={() => setShowDetails(!showDetails)}
               className="mt-1 px-4 py-2 rounded-lg bg-[#9CA3AF] text-[#23262a] font-semibold transition hover:bg-[#ececec] text-sm"
             >
-              {showDetails ? "Fermer" : "En savoir plus"}
+              {showDetails ? "Close" : "Learn more"}
             </button>
             <AnimatePresence>
               {showDetails && (

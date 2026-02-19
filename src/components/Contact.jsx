@@ -8,7 +8,6 @@ const prefix = import.meta.env.BASE_URL;
 const socials = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/martin-desbans-704a0b383", icon: `${prefix}icons/linkdin.png` },
   { name: "GitHub", url: "https://github.com/XXXXX-X-XXXXX", icon: `${prefix}icons/github.png` },
-  { name: "Instagram", url: "https://www.instagram.com/martin___dbs/", icon: `${prefix}icons/insta.png` },
   { name: "Email", url: "mailto:martin.desbans@ynov.com", icon: `${prefix}icons/mail.png` },
 ];
 
@@ -36,10 +35,10 @@ export default function Contact() {
       <div className="w-full max-w-5xl flex flex-col md:flex-row gap-8 md:gap-10 justify-between items-stretch mx-auto">
         {/* Bloc gauche : formulaire + réseaux */}
         <div className="flex flex-col justify-center items-start gap-5 md:gap-7 flex-1">
-          <span className="font-bold text-base md:text-lg text-gray-300">Retrouve-moi sur :</span>
+          <span className="font-bold text-base md:text-lg text-gray-300">Find me on:</span>
 
           <form onSubmit={handleSubmit} className="w-full mb-2">
-            <label htmlFor="name" className="block text-sm font-semibold mb-1 text-gray-300">Ton nom</label>
+            <label htmlFor="name" className="block text-sm font-semibold mb-1 text-gray-300">Your name</label>
             <input
               id="name" type="text" name="name" required
               className="w-full p-2 rounded-lg bg-[#23262a] text-white outline-none mb-2 text-sm md:text-base"
@@ -47,7 +46,7 @@ export default function Contact() {
             />
             <ValidationError prefix="Nom" field="name" errors={state.errors} />
 
-            <label htmlFor="email" className="block text-sm font-semibold mb-1 text-gray-300">Ton email</label>
+            <label htmlFor="email" className="block text-sm font-semibold mb-1 text-gray-300">Your email</label>
             <input
               id="email" type="email" name="email" required
               className="w-full p-2 rounded-lg bg-[#23262a] text-white outline-none mb-2 text-sm md:text-base"
@@ -55,11 +54,11 @@ export default function Contact() {
             />
             <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-            <label htmlFor="message" className="block text-sm font-semibold mb-1 text-gray-300">Ton message</label>
+            <label htmlFor="message" className="block text-sm font-semibold mb-1 text-gray-300">Your message</label>
             <textarea
               id="message" name="message" required
               className="w-full p-2 rounded-lg bg-[#23262a] text-white outline-none mb-2 resize-none text-sm md:text-base"
-              placeholder="Ton message" autoComplete="off"
+              placeholder="Your message" autoComplete="off"
             />
             <ValidationError prefix="Message" field="message" errors={state.errors} />
 
@@ -67,10 +66,10 @@ export default function Contact() {
               type="submit" disabled={state.submitting}
               className="px-5 py-2 rounded-xl font-bold bg-gradient-to-r from-[#9CA3AF] to-[#333] text-white shadow hover:scale-105 transition text-sm md:text-base"
             >
-              Envoyer par mail
+              Send by email
             </button>
             {state.succeeded && (
-              <p className="text-green-400 mt-2 font-semibold text-sm">Merci pour ton message !</p>
+              <p className="text-green-400 mt-2 font-semibold text-sm">Thank you for your message!</p>
             )}
           </form>
 
@@ -81,7 +80,7 @@ export default function Contact() {
                 <img
                   src={social.icon} alt={social.name}
                   className="w-9 h-9 md:w-12 md:h-12 hover:scale-110 transition transform duration-200"
-                  style={{ filter: "drop-shadow(0 0 10px #e0e0e066)" }}
+                  style={{ filter: "drop-shadow(0 0 10px #f7f7f7ff)" }}
                 />
               </a>
             ))}
@@ -90,7 +89,7 @@ export default function Contact() {
 
         {/* Bloc droite : avis */}
         <div className="flex flex-col rounded-2xl shadow-lg p-5 md:p-7 flex-1">
-          <span className="font-bold text-base md:text-lg mb-4 text-gray-300">Laisse un avis :</span>
+          <span className="font-bold text-base md:text-lg mb-4 text-gray-300">Leave a comment:</span>
           <CommentsSection />
         </div>
       </div>
