@@ -5,6 +5,14 @@ const prefix = import.meta.env.BASE_URL;
 
 const projects = [
   {
+    title: "pfSense Firewall Setup",
+    description: "Installation, securing, and advanced filtering with pfSense (NAT, DHCP, DNS, Alias).",
+    details: "Configuration complète d'un pare-feu pfSense : gestion des interfaces WAN/LAN, mise en place de règles de filtrage par IP/MAC, et création de portails captifs.",
+    img: `${prefix}images/pfsense.png`, 
+    tags: ["Firewall", "Network", "pfSense"],
+    url: "/projet-pfsense"
+  },
+  {
     title: "SSH Administration & Nginx Web Server",
     description: "Setup of a virtualized Ubuntu server, secured via SSH, and deployment of an Nginx web server with HTTPS.”",
     details: "Virtualisation d'un serveur Ubuntu, durcissement SSH, installation et configuration de Nginx, mise en place du HTTPS et gestion des certificats.",
